@@ -14,4 +14,4 @@ point_li (fiducial point estimator).
 
 To reproduce tables in the simulations of the paper, run 
 
-To reproduce results in the real data analysis of the paper, run 
+To reproduce results in the real data analysis of the paper, run hiv_realdata.R for the HIV dataset and rubella_realdata.R for the rubella dataset.
