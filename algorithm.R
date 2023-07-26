@@ -79,7 +79,7 @@ fid.upper.test[j,]=fiducial.sample.test[2,]
 
 }
 
-############# fiducial CIs ##############
+############# fiducial estimator##############
 FiducialLower1=t(fid.lower.test[(mburn+1):(mburn+mfid),]) # lower fiducial bound, mfid * ngrid
 FiducialUpper1=t(fid.upper.test[(mburn+1):(mburn+mfid),]) # upper fiducial bound, mfid * ngrid
 
