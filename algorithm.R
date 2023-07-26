@@ -26,18 +26,18 @@ fid.upper.test <- matrix(NA,mfid+mburn,ntestgrid)
 
 for (j in 1:(mfid+mburn)){ # repeat for each fiducial sample
 for (i in 1:nsample){ # Gibbs sampler corresponding to Lines 6-11
-  vu.pre <- vu[-i]
+  vu.pre <- vu[-i] # Line 7
   l.pre <- l[-i]
   r.pre <- r[-i]
   index1 <- which(l[i]>=r.pre)
   if(length(index1)>0){
   u.lower <- max(vu.pre[index1]) }
-  else u.lower <- 0  ##### l 
+  else u.lower <- 0  ##### Line 8
   index2 <- which(r[i]<=l.pre)
   if(length(index2)>0){
   u.upper <- min(vu.pre[index2])  
-  } else u.upper <- 1 ##### r
-  vu[i] <- runif(1,min=u.lower, max=u.upper)
+  } else u.upper <- 1 ##### Line 9
+  vu[i] <- runif(1,min=u.lower, max=u.upper) # Line 10
 } 
 
 temp <- runif(nsample)   
@@ -50,11 +50,11 @@ fiducial.sample=sapply(grid,function(s){
   index1 <- which(s>=r)
   if(length(index1)>0){
     lower <- max(vu[index1]) }
-  else lower <- 0  ##### l 
+  else lower <- 0  ##### Line 18 
   index2 <- which(s<l)
   if(length(index2)>0){
     upper <- min(vu[index2])  
-  } else upper <- 1 ##### r
+  } else upper <- 1 ##### Line 19
   return(rbind(lower,upper))
 })
 
@@ -66,11 +66,11 @@ fiducial.sample.test=sapply(testgrid,function(s){
   index1 <- which(s>=r)
   if(length(index1)>0){
     lower <- max(vu[index1]) }
-  else lower <- 0  ##### l 
+  else lower <- 0   
   index2 <- which(s<l)
   if(length(index2)>0){
     upper <- min(vu[index2])  
-  } else upper <- 1 ##### r
+  } else upper <- 1 
   return(rbind(lower,upper))
 })
 
