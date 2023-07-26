@@ -3,7 +3,7 @@ source('LinInterpolation.R')
 source('rdunif.R')
 library(interval)
 #########
-n = 50
+n = 50 # change n to other sample sizes
 nrep = 1000
 mfid = 1000
 mburn = 100
