@@ -12,6 +12,6 @@ FiducialLower1 (lower fiducial samples);
 FiducialUpper1 (upper fiducial samples);
 point_li (fiducial point estimator).
 
-To reproduce tables in the simulations of the paper, run 
+To reproduce tables in the simulations of the paper, run point_1.R, point_2.R, point_3.R, point_4.R for MSE evaluation (Tables 3 & 4); run CI_1.R, CI_2.R, CI_3.R, CI_4.R for confidence interval evaluation (Tables 1 & 2).
 
 To reproduce results in the real data analysis of the paper, run hiv_realdata.R for the HIV dataset and rubella_realdata.R for the rubella dataset.
